@@ -23,17 +23,17 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy <2.0.0
-    - pytorch >=2.0,<=2.5.1
-    - torchvision <=0.20.1
+    - pytorch >=2.0,<=2.5
+    - torchvision <=0.20
     - bioimageio.core ==0.7
-    - tifffile <=2024.12.12
-    - pillow <=11.0.0
+    - tifffile <=2024.8.30
+    - pillow <=10.3.0
     - psutil <=6.1
-    - pydantic >=2.5,<2.11
+    - pydantic >=2.5,<2.9
     - pytorch-lightning >=2.2,<=2.4
     - pyyaml <=6.0.2,!=6.0.0
-    - typer ==0.15.1
-    - scikit-image <=0.25.0
+    - typer ==0.12.3
+    - scikit-image <=0.22.2
     - zarr <3.0.0
 
 test:
