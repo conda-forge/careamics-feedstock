@@ -1,6 +1,7 @@
 {% set name = "careamics" %}
 {% set version = "0.0.8" %}
 
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -8,6 +9,7 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/careamics-{{ version }}.tar.gz
   sha256: 60e0413028f3b07e89c61361c7cf0bd22945beb46c72327c396b802b2782b1d4
+
 
 build:
   noarch: python
@@ -23,8 +25,8 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy <2.0.0
-    - pytorch >=2.0,<=2.5.1
-    - torchvision <=0.20.1
+    - pytorch >=2.0,<=2.6.0
+    - torchvision <=0.21.0
     - bioimageio.core ==0.7
     - tifffile <=2025.1.10
     - psutil <=6.1.1
@@ -32,10 +34,10 @@ requirements:
     - pytorch-lightning >=2.2,<=2.5
     - pyyaml <=6.0.2,!=6.0.0
     - typer >=0.12.3,<=0.15.1
-    - scikit-image <=0.25.0
+    - scikit-image <=0.25.1
     - zarr <3.0.0
     - pillow <=11.1.0
-    - matplotlib-base <=3.9.0
+    - matplotlib-base <=3.10.0
 
 test:
   imports:
