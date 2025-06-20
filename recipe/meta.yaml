@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -25,7 +25,7 @@ requirements:
     - numpy <2.0.0
     - pytorch >=2.0,<=2.6.0
     - torchvision <=0.21.0
-    - bioimageio.core ==0.7
+    - bioimageio.core ==0.7  # When this changes, see if the xarray contraint can be lifted.
     - tifffile <=2025.1.10
     - psutil <=6.1.1
     - pydantic >=2.5,<2.11
@@ -36,6 +36,9 @@ requirements:
     - zarr <3.0.0
     - pillow <=11.1.0
     - matplotlib-base <=3.10.0
+
+    # Presumably this is only needed until the bioimageio.core pin is updated
+    - xarray <2025.3.0
 
 test:
   imports:
