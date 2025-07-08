@@ -1,5 +1,6 @@
 {% set name = "careamics" %}
-{% set version = "0.0.12" %}
+{% set version = "0.0.14" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/careamics-{{ version }}.tar.gz
-  sha256: a5d8b2feb6b4dcbaaf126b91972ef0289e7f54487d98b8b18804c03bb2cf7460
+  sha256: 0b83916f6fffb85dea251d0bcad33b13e8ebf643bd1b55128d88694c76b0e72c
 
 build:
   noarch: python
@@ -23,21 +24,19 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy <2.0.0
-    - pytorch >=2.0,<=2.6.0
-    - torchvision <=0.21.0
+    - pytorch >=2.0,<=2.7.1
+    - torchvision <=0.22.1
     - bioimageio.core ==0.7
-    - tifffile <=2025.3.13
+    - tifffile <=2025.5.10
     - psutil <=7.0.0
     - pydantic >=2.11,<=2.12
-    - pytorch-lightning >=2.2,<=2.5.0.post0
+    - pytorch-lightning >=2.2,<=2.5.2
     - pyyaml <=6.0.2,!=6.0.0
-    - typer >=0.12.3,<=0.15.2
+    - typer >=0.12.3,<=0.16.0
     - scikit-image <=0.25.2
     - zarr <3.0.0
     - pillow <=11.2.1
-    - matplotlib-base <=3.10.1
-
-    # Presumably this is only needed until the bioimageio.core pin is updated to v0.8.0
+    - matplotlib-base <=3.10.3
     - xarray <2025.3.0
 
 test:
