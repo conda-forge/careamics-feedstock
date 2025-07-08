@@ -25,7 +25,7 @@ requirements:
     - numpy <2.0.0
     - pytorch >=2.0,<=2.7.1
     - torchvision <=0.22.1
-    - bioimageio.core ==0.9.0
+    - bioimageio.core ==0.7
     - tifffile <=2025.5.10
     - psutil <=7.0.0
     - pydantic >=2.11,<=2.12
@@ -36,6 +36,7 @@ requirements:
     - zarr <3.0.0
     - pillow <=11.2.1
     - matplotlib-base <=3.10.3
+    - xarray <2025.3.0
 
 test:
   imports:
