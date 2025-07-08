@@ -1,5 +1,5 @@
 {% set name = "careamics" %}
-{% set version = "0.0.14" %}
+{% set version = "0.0.15" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/careamics-{{ version }}.tar.gz
-  sha256: 0b83916f6fffb85dea251d0bcad33b13e8ebf643bd1b55128d88694c76b0e72c
+  sha256: 587ed154dfba42f5b2067fed19c4d74238f97cd969b67345dbd6391369891bcf
 
 build:
   noarch: python
