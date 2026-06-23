@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/careamics-{{ version }}.tar.gz
-  sha256: b7ac347876a116189d73b1f94845b5462e98f27b1f4b47b986a5f3da7280fef5
+  sha256: 02dd08880966614664d6bde3e1e663eebfa3bd7e62b7cce1923234e48333bca7
 
 build:
   noarch: python
