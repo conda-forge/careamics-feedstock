@@ -1,5 +1,5 @@
 {% set name = "careamics" %}
-{% set version = "0.0.22" %}
+{% set version = "0.1.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/careamics-{{ version }}.tar.gz
-  sha256: 0d6730f065cffe8cd05878f96b20ec4a946694fb0a0e51311760b985eeae1782
+  sha256: b7ac347876a116189d73b1f94845b5462e98f27b1f4b47b986a5f3da7280fef5
 
 build:
   noarch: python
@@ -24,15 +24,15 @@ requirements:
   run:
     - python >={{ python_min }}
     - numpy >=1.21.0
-    - pytorch >=2.0,<=2.10.0
+    - pytorch >=2.0,<2.10.0
     - torchvision <=0.25.0
     - bioimageio.core >=0.9.0
-    - tifffile <=2026.2.15
+    - tifffile <=2026.3.3
     - psutil <=7.2.2
     - pydantic >=2.11,<=2.12.5
     - pytorch-lightning >=2.2,<=2.6.1
     - pyyaml <=6.0.3,!=6.0.0
-    - typer >=0.12.3,<=0.23.1
+    - typer >=0.12.3,<=0.24.1
     - scikit-image <=0.26.0
     - zarr >=3.0.0,<4.0.0
     - pillow <=12.1.1
