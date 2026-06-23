@@ -1,5 +1,5 @@
 {% set name = "careamics" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/careamics-{{ version }}.tar.gz
-  sha256: b7ac347876a116189d73b1f94845b5462e98f27b1f4b47b986a5f3da7280fef5
+  sha256: 02dd08880966614664d6bde3e1e663eebfa3bd7e62b7cce1923234e48333bca7
 
 build:
   noarch: python
@@ -23,23 +23,22 @@ requirements:
     - hatch-vcs
   run:
     - python >={{ python_min }}
-    - numpy >=1.21.0
+    - numpy >=1.21.0,<=2.4.5
+    - pydantic >=2.11,<=2.13.3
+    - pytorch-lightning >=2.2,<=2.6.1,!=2.6.2,!=2.6.3
     - pytorch >=2.0,<2.10.0
-    - torchvision <=0.25.0
-    - bioimageio.core >=0.9.0
-    - tifffile <=2026.3.3
-    - psutil <=7.2.2
-    - pydantic >=2.11,<=2.12.5
-    - pytorch-lightning >=2.2,<=2.6.1
+    - torchmetrics >0.11.0,<1.9.0
     - pyyaml <=6.0.3,!=6.0.0
-    - typer >=0.12.3,<=0.24.1
     - scikit-image <=0.26.0
     - zarr >=3.0.0,<4.0.0
-    - pillow <=12.1.1
-    - matplotlib-base <=3.10.8
-    - validators <=0.35.0
-    - torchmetrics >=0.11.0,<1.5.0
-    - microssim
+    - tifffile <=2026.3.3
+    - matplotlib-base <=3.10.9
+    - microssim <=0.0.4
+    - torchvision <=0.25.0
+    - bioimageio.core >=0.9.0,<=0.9.5
+    - pillow <=12.2.0
+    - psutil <=7.2.2
+
 
 test:
   imports:
