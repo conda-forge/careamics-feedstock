@@ -23,19 +23,19 @@ requirements:
     - hatch-vcs
   run:
     - python >={{ python_min }}
-    - numpy >=1.21.0,<=2.4.5
+    - numpy >=1.21.0,<=2.4.6
     - pydantic >=2.11,<=2.13.3
-    - pytorch-lightning >=2.2,<=2.6.1,!=2.6.2,!=2.6.3
+    - pytorch-lightning >=2.2,<=2.6.5,!=2.6.2,!=2.6.3
     - pytorch >=2.0,<2.10.0
     - torchmetrics >0.11.0,<1.9.0
     - pyyaml <=6.0.3,!=6.0.0
     - scikit-image <=0.26.0
     - zarr >=3.0.0,<4.0.0
     - tifffile <=2026.3.3
-    - matplotlib-base <=3.10.9
+    - matplotlib-base <=3.11.0
     - microssim <=0.0.4
     - torchvision <=0.25.0
-    - bioimageio.core >=0.9.0,<=0.9.5
+    - bioimageio.core >=0.9.0,<=0.10.4
     - pillow <=12.2.0
     - psutil <=7.2.2
 
