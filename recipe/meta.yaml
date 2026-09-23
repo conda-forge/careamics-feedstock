@@ -1,6 +1,5 @@
 {% set name = "careamics" %}
-{% set version = "0.3.3" %}
-{% set python_min = "3.11" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/careamics-{{ version }}.tar.gz
-  sha256: 006cf56fc9a6d35104bd0ecce93b5a0d162fe7d01f259b0da1c3b94f8068167d
+  sha256: 32f6bcd399c4fa0fc91ff5151ed3fe32a32beb0f808858383cd4c338026582ca
 
 build:
   noarch: python
@@ -32,8 +31,8 @@ requirements:
     - scikit-image <=0.26.0
     - zarr >=3.0.0,<4.0.0
     - tifffile <=2026.3.3
-    - matplotlib-base <=3.11.1
-    - microssim <=0.0.4
+    - matplotlib-base <=3.11.2
+    - microssim <=0.0.5
     - torchvision <=0.26.0
     - bioimageio.core >=0.9.0,<=0.11.0
     - pillow <=12.3.0
